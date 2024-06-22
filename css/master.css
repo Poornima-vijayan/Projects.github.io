@@ -331,3 +331,29 @@ nav.open .btn-container span{
     margin: 5px;
     cursor: pointer;
   }
+
+  @media screen and (max-width: 500px) {
+    
+    header{
+        background-image: url('../images/Banner.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        width: 100vw;
+        height: 50px;
+        color: #fff;
+    }
+
+    .animated-text{
+        position: absolute;
+        top: 40px;
+        left: 50px;
+        width: 80px;
+        height: 100px;
+        padding: 2em;
+        background-color: #464646;
+        color: #fff;
+        line-height: 3em;
+        overflow: hidden;
+    }
+    
+  }
