@@ -333,13 +333,21 @@ nav.open .btn-container span{
   }
 
   @media screen and (max-width: 500px) {
+
+    body{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
     
     header{
         background-image: url('../images/Banner.png');
         background-size: 100% 100%;
         background-repeat: no-repeat;
         width: 100vw;
-        height: 50px;
+        height: 100px;
         color: #fff;
     }
 
@@ -347,8 +355,8 @@ nav.open .btn-container span{
         position: absolute;
         top: 40px;
         left: 50px;
-        width: 80px;
-        height: 100px;
+        width: 300px;
+        height: 600px;
         padding: 2em;
         background-color: #464646;
         color: #fff;
