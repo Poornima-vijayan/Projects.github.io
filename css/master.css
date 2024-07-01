@@ -73,10 +73,7 @@ header p{
     overflow: hidden;
 }
 
-
-
-
-  .line{
+.line{
     text-transform: uppercase; 
     
     /* text-align: center; */
@@ -112,10 +109,35 @@ header p{
     }
 } 
 
+.pages{
+    margin-top: 20px;
+    height: 40px;
+    background-color: #d1d1d1;
+    color: #000;
+}
+
+.pages ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 10px;
+    margin: 10px;
+}
+
+.pages ul li a{
+    text-decoration: none;
+    
+}
+
+.symbol::after{
+    content: " >> ";
+}
+
+
 nav{
     position: absolute;
     top: 130px;
-    right: 100px;
+    right: 50px;
     width: 80px;
     height: 300px;
     display: flex;
@@ -132,20 +154,33 @@ nav .btn-container{
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: rotate(-70deg); /* To rotate whole buttons in y axis position */
+    transform: rotate(-45deg); /* To rotate whole buttons in y axis position */
 }
 
 nav .btn-container .toggle-btn{
     z-index: 100;
     cursor: pointer;
 }
+
+nav .btn-container span a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 nav.open .btn-container span{
     position: absolute;
     transform: rotate(calc(var(--button) * (360deg/8))) translateY(200px);
     
 }
 
+nav.open .btn-container span a{
+    position: absolute;
+    transform: rotate(calc(var(--button) * (360deg/-8)));
+}
+
 .btn{
+    position: relative;
     width: 100px;
     height: 100px;
     border: 5px solid #031058;  
@@ -154,6 +189,10 @@ nav.open .btn-container span{
     box-shadow: 0 4px 8px 0 rgba(68, 68, 68, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     /* box-shadow: 0 0 20px #000; */
     color: #fff;
+    transform: rotate(45deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn-yellow{
@@ -186,19 +225,94 @@ nav.open .btn-container span{
     border: 5px solid #104942;
 }
 
+.btn:hover{
+    background: #4b4b4b;
+}
+
 .btn-container span{
     position: absolute;
     text-decoration: none;
     color: #fff;
     transition: all 0.6s ease;
-    
-}
+ }
 
 
 .btn-container span  a{
     text-decoration: none;
     color: #fff;
+}
+
+.click{
+    display: none;
+}
+
+.app{
+    background: #fff;
+    width: 90%;
+    max-width: 800px;
+    margin: 100px auto 0;
+    border: #000 solid 0.5px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.app h1{
+    border-bottom: #000 solid 1.5px;
+    padding: 20px;
+}
+
+#question{
+    padding: 20px;
+}
+
+.btn1{
+    background: #fff;
+    color: #222;
+    width: 100%;
+    border: 1px solid #000;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+}
+ /*Hover effect will work when it is not disabled*/
+.btn1:hover:not([disabled]){
+    background-color: #1d1d1d;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn1:hover{
+    cursor: no-drop;
+}
+
+#next_btn{
+    /* display: none; */
+    background-color: #1d1d1d;
+    color: #fff;
+    width: 150px;
+    padding: 10px;
+    margin: 20px auto 0;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+}
+/* basic.js*/
+.correct{
+    background: #05f72d;
     
+}
+
+.incorrect{
+    background: #f70202;
+    color: #fff;
+}
+
+.home{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
 }
 
 .footer-container{
@@ -208,7 +322,7 @@ nav.open .btn-container span{
     height: 100px; */
 }
 
-.footer-container p{
+.copyright-text{
     position: absolute;
     top:600px;
     width: 100vw;
@@ -218,3 +332,356 @@ nav.open .btn-container span{
     text-align: center;
     padding: 20px;
 }
+
+.copyright_quiz{
+    position: absolute;
+    top:200px;
+    width: 100vw;
+    height: 50px;
+    background-color: #292929;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.option-image {
+    width: 300px;
+    height: 300px;
+    
+    margin: 5px;
+    cursor: pointer;
+  }
+
+  @media (min-width: 375px) and (max-width: 667px) {
+
+    header{
+        background-image: url('../images/Banner.png');
+        background-repeat: no-repeat;
+        width: 65vmax;
+        height: 250px;
+        color: #fff;
+    }
+
+    header h1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        margin-top: 1em;
+        }
+        
+    header p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        }
+
+    .content-container{
+        display: flex;
+        flex-direction: column;
+        }
+
+    .animated-text{
+        position: absolute;
+        top: 21em;
+        left: 2.5em;
+        width: 350px;
+        
+        }
+
+    nav{
+        position: absolute;
+        bottom: 10em;
+        right: 4em;
+        width: 300px;
+        height: 100px;
+    }
+        
+    .btn-container{
+        display: flex;
+        flex-direction: column;
+    }
+        
+    nav .btn-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: rotate(-45deg); 
+    }
+        
+    nav .btn-container .toggle-btn{
+        z-index: 100;
+        cursor: pointer;
+    }
+
+    nav .btn-container span a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+        
+    nav.open .btn-container span{
+        position: absolute;
+        transform: rotate(calc(var(--button) * (360deg/8))) translateY(100px);
+    }
+
+    nav.open .btn-container span a{
+        position: absolute;
+        transform: rotate(calc(var(--button) * (360deg/-8)));
+    }
+
+    .click{
+        position: absolute;
+        width: 120px;
+        top:  160px;
+        left: 250px;
+        text-align: center;
+        display: block;
+    }
+        
+    .btn{
+        width: 75px;
+        height: 75px;
+        border: 3px solid #031058;  
+        border-radius: 100px;
+        background-image: radial-gradient(circle,#081c88,#1538fc,#fff);
+        box-shadow: 0 2px 4px 0 rgba(68, 68, 68, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        color: #fff;
+        transform: rotate(45deg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    
+    .btn-yellow{
+        background-image: radial-gradient(circle,#505005,#9b9b0c,#fff);
+        border: 3px solid #4d4d05;
+    }
+    
+    .btn-green{
+        background-image: radial-gradient(circle,#017a01,#06cf06,#fff);
+        border: 3px solid #094409;
+    }
+        
+    .btn-orange{
+        background-image: radial-gradient(circle,#704c09,#ffa500,#fff);
+        border: 3px solid #44300a;
+    }
+        
+    .btn-purple{
+        background-image: radial-gradient(circle,#800080,#e009e0,#fff);
+        border: 3px solid #5a035a;
+    }
+    
+    .btn-red{
+        background-image: radial-gradient(circle,#770303,#ff0000,#fff);
+        border: 3px solid #5e0f0f;
+    }
+        
+    .btn-brown{
+        background-image: radial-gradient(circle,#016457,#05dabd,#fff);
+        border: 3px solid #104942;
+    }
+
+    .btn:active{
+        background-image: radial-gradient(circle,#081c88,#1538fc,#fff);
+    }
+
+    
+        .copyright-text{
+            position: absolute;
+            top:800px;
+            width: 65vmax;
+            height: 50px;
+            background-color: #292929;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .btn-container span  a{
+            text-decoration: none;
+            font-size:smaller;
+            color: #fff;
+            
+        }
+    }
+
+    @media (min-width: 414px) and (max-width: 896px){
+
+        header h1{
+            font-size: 2.8rem;
+            }
+            
+        header p{
+            font-size: 1.2rem;
+            }        
+    
+        .animated-text{
+            left: 2.3em;
+            width: 500px;
+            bottom: 20em;
+           
+            }
+    
+        nav{
+            right: 6em;
+           
+           }
+            
+        
+        .click{
+            position: absolute;
+            width: 200px;
+            font-size: 1.5rem;
+            top:  160px;
+            left: 300px;
+            text-align: center;
+        }
+
+        .copyright-text{
+           top: 60em;
+        }
+            
+    }
+
+    @media (min-width: 768px) {
+
+        header h1{
+            font-size: 3.5rem;
+            }
+            
+        header p{
+            font-size: 1.5rem;
+            }        
+    
+        .animated-text{
+            left: 80px;
+            width: 600px;
+            top: 550px;
+            height: 300px;
+            }
+    
+        nav{
+            /* left: 10em; */
+            left: 200px;
+            width: 200px;
+           }
+
+        
+        .click{
+            position: absolute;
+            width: 200px;
+            font-size: 1.5rem;
+            top:  250px;
+            left: 400px;
+            text-align: center;
+            display: block;
+        }
+
+        .copyright-text{
+           top: 60em;
+        }
+    
+    }
+
+ /*    @media (max-width: 1024px) {
+
+        header h1{
+            font-size: 3.5rem;
+            }
+            
+        header p{
+            font-size: 1.5rem;
+            }        
+    
+        .animated-text{
+            left: 80px;
+            width: 850px;
+            top: 450px;
+            height: 400px;
+            }
+    
+        nav{
+            left: 300px;
+            width: 200px;
+           }
+
+        nav .btn-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: rotate(45deg); 
+            }
+
+        .btn{
+            transform: rotate(-45deg);
+            }
+        
+        .click{
+            position: absolute;
+            width: 180px;
+            font-size: 1.5rem;
+            top:  250px;
+            left: 700px;
+            text-align: center;
+        }
+
+        .copyright-text{
+           top: 62em;
+        }
+    
+    } */
+
+  /*   @media (max-width: 1280px) {
+
+        header h1{
+            font-size: 3.5rem;
+            }
+            
+        header p{
+            font-size: 1.5rem;
+            }        
+    
+        .animated-text{
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            width: 500px;
+            height: 750px;
+            padding: 2em;
+            background-color: #464646;
+            color: #fff;
+            line-height: 3em;
+            overflow: hidden;
+}
+        nav{
+            position: absolute;
+            top: 300px;
+            left: 900px;
+            width: 60px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .click{
+            position: absolute;
+            width: 180px;
+            font-size: 1.5rem;
+            top:  250px;
+            left: 700px;
+            text-align: center;
+            display: none;
+        }
+
+        .copyright-text{
+           top: 62em;
+        }
+    
+    }
+ */
